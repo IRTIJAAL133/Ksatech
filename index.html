@@ -23,4 +23,47 @@
       width: 100% !important;
       height: 100% !important;
       border: none;
-      display: bloc
+      display: block;
+    }
+
+    /* Countdown overlay */
+    #countdown {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+      padding: 6px 10px;
+      border-radius: 8px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body onclick="window.location.href='https://t.co/TgjeeVdjRZ'">
+
+  <!-- Updated Imgur Embed (Rsxz6zO) -->
+  <blockquote class="imgur-embed-pub" lang="en" data-id="Rsxz6zO">
+    <a href="https://imgur.com/Rsxz6zO">View post on imgur.com</a>
+  </blockquote>
+  <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+  <!-- Countdown overlay -->
+  <div id="countdown">5</div>
+
+  <script>
+    let s = 5;
+    const c = document.getElementById("countdown");
+    const url = "https://t.co/TgjeeVdjRZ";
+    const t = setInterval(() => {
+      s--;
+      c.textContent = s;
+      if (s <= 0) {
+        clearInterval(t);
+        window.location.href = url;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
