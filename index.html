@@ -16,14 +16,17 @@
       width: 100%;
       overflow: hidden;
       background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Make the Imgur embed fill the screen */
-    .imgur-embed-pub, iframe {
-      width: 100% !important;
-      height: 100% !important;
-      border: none;
-      display: block;
+    /* Fullscreen image */
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
     }
 
     /* Countdown overlay */
@@ -43,11 +46,8 @@
 </head>
 <body onclick="window.location.href='https://t.co/TgjeeVdjRZ'">
 
-  <!-- Updated Imgur Embed (Rsxz6zO) -->
-  <blockquote class="imgur-embed-pub" lang="en" data-id="Rsxz6zO">
-    <a href="https://imgur.com/Rsxz6zO">View post on imgur.com</a>
-  </blockquote>
-  <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+  <!-- Fullscreen Google Drive image -->
+  <img src="https://drive.google.com/uc?export=view&id=1uQhzb3u691T90OxozjAEf0UG9ll-0opn" alt="Redirect image">
 
   <!-- Countdown overlay -->
   <div id="countdown">5</div>
