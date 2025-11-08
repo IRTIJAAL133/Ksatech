@@ -19,6 +19,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      flex-direction: column;
     }
 
     /* Play button shape */
@@ -31,6 +32,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 20px;
       transition: transform 0.2s ease, background 0.3s ease;
     }
 
@@ -43,24 +45,19 @@
       content: "";
       width: 0;
       height: 0;
-      border-left: 24px solid #fff;
-      border-top: 14px solid transparent;
-      border-bottom: 14px solid transparent;
-      margin-left: 6px;
+      border-left: 26px solid #fff;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      margin-left: 8px;
     }
 
-    /* Countdown in bottom-right corner */
+    /* Center countdown text */
     #countdown {
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      background: rgba(0, 0, 0, 0.5);
       color: #fff;
       font-family: system-ui, sans-serif;
-      font-size: 1rem;
-      padding: 6px 10px;
-      border-radius: 8px;
-      z-index: 10;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -69,7 +66,7 @@
   <!-- Centered play button -->
   <div class="play-button"></div>
 
-  <!-- Countdown overlay -->
+  <!-- Big countdown in the center -->
   <div id="countdown">5</div>
 
   <script>
