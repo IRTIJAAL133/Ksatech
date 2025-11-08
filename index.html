@@ -16,23 +16,26 @@
       width: 100%;
       background: #000;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      flex-direction: column;
+      user-select: none;
     }
 
-    /* Play button shape */
+    /* Responsive play button */
     .play-button {
-      width: 100px;
-      height: 100px;
+      width: 22vw;
+      height: 22vw;
+      max-width: 120px;
+      max-height: 120px;
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid #fff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       transition: transform 0.2s ease, background 0.3s ease;
     }
 
@@ -45,19 +48,35 @@
       content: "";
       width: 0;
       height: 0;
-      border-left: 26px solid #fff;
-      border-top: 16px solid transparent;
-      border-bottom: 16px solid transparent;
-      margin-left: 8px;
+      border-left: 5vw solid #fff;
+      border-top: 3vw solid transparent;
+      border-bottom: 3vw solid transparent;
+      margin-left: 1vw;
     }
 
-    /* Center countdown text */
+    /* Responsive countdown */
     #countdown {
       color: #fff;
       font-family: system-ui, sans-serif;
-      font-size: 3rem;
-      font-weight: bold;
-      margin-top: 10px;
+      font-size: 8vw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* Slightly adjust for very small screens */
+    @media (max-width: 400px) {
+      .play-button {
+        width: 30vw;
+        height: 30vw;
+      }
+      .play-button::before {
+        border-left: 7vw solid #fff;
+        border-top: 4vw solid transparent;
+        border-bottom: 4vw solid transparent;
+      }
+      #countdown {
+        font-size: 10vw;
+      }
     }
   </style>
 </head>
@@ -66,7 +85,7 @@
   <!-- Centered play button -->
   <div class="play-button"></div>
 
-  <!-- Big countdown in the center -->
+  <!-- Countdown number -->
   <div id="countdown">5</div>
 
   <script>
